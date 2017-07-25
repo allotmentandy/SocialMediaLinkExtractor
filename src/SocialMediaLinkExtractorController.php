@@ -1,5 +1,5 @@
 <?php
-namespace allotmentandy\SocialMediaLinkExtractor;
+namespace allotmentandy\socialmedialinkextractor;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;

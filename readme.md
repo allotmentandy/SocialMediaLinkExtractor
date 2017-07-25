@@ -4,6 +4,13 @@ My first package!
 
 The idea is to create a nice easy way to extract the social media links from an array of links. For use in my webspider
 
+## to install
+
+add 
+
+composer require allotmentandy/socialmedialinkextractor
+
+
 ## to use with laravel
 
 ```

@@ -1,6 +1,6 @@
 <?php
 
-namespace allotmentandy\SocialMediaLinkExtractor;
+namespace allotmentandy\socialmedialinkextractor;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -27,6 +27,6 @@ class SocialMediaLinkExtractorServiceProvider extends ServiceProvider
         //
 
         // register our controller
-        $this->app->make('allotmentandy\SocialMediaLinkExtractor\SocialMediaLinkExtractorController');
+        $this->app->make('allotmentandy\socialmedialinkextractor\SocialMediaLinkExtractorController');
     }
 }
