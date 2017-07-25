@@ -8,5 +8,6 @@
             "email": "andy.derkacz@gmail.com"
         }
     ],
+     "minimum-stability": "dev",
     "require": {}
 }
