@@ -15,4 +15,5 @@
         "psr-4": {
             "allotmentandy\\socialmedialinkextractor\\": "src/"
         }
+    }
 }
