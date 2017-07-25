@@ -1,0 +1,12 @@
+{
+    "name": "allotmentandy/socialmedialinkextractor",
+    "description": "extracts social media links for an array of links eg. twitter, facebook etc.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "allotmentandy",
+            "email": "andy.derkacz@gmail.com"
+        }
+    ],
+    "require": {}
+}
