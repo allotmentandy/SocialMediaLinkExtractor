@@ -15,5 +15,9 @@
         "psr-4": {
             "allotmentandy\\socialmedialinkextractor\\": "src/"
         }
-    }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+    },
 }
