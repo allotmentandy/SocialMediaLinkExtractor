@@ -15,6 +15,27 @@ class SocialMediaLinkExtractorController extends Controller
     public function getTwitter($array)
     {
         foreach ($array as $link) {
+            if (strpos($link, "http://twitter.com/intent/") != false) {
+                continue;
+            }
+            if (strpos($link, "http://twitter.com/i/") != false) {
+                continue;
+            }
+            if ($link == "http://www.twitter.com/") {
+                continue;
+            }
+            if (strpos($link, "/status/") != false) {
+                continue;
+            }
+            if (strpos($link, "?") != false) {
+                continue;
+            }
+            if (substr($link, 0, 4) != "http") {
+                continue;
+            }
+
+
+
             if (strpos($link, "twitter.com") !== false) {
                 return $link;
             }
