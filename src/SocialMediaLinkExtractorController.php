@@ -30,6 +30,9 @@ class SocialMediaLinkExtractorController extends Controller
             if ($link == "https://twitter.com/twitter") {
                 continue;
             }
+            if ($link == "https://twitter.com/twitterapi") {
+                continue;
+            }
             if (strpos($link, "/status/") != false) {
                 continue;
             }
