@@ -24,7 +24,13 @@ class SocialMediaLinkExtractorController extends Controller
             if ($link == "http://www.twitter.com/") {
                 continue;
             }
+            if ($link == "http://www.twitter.com") {
+                continue;
+            }
             if ($link == "http://twitter.com/") {
+                continue;
+            }
+            if ($link == "http://twitter.com") {
                 continue;
             }
             if ($link == "http://www.twitter.com/twitter") {
@@ -60,7 +66,21 @@ class SocialMediaLinkExtractorController extends Controller
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
-
+            if (strpos($link, "https://www.facebook.com/sharer") != false) {
+                continue;
+            }
+            if ($link == "http://www.facebook.com") {
+                continue;
+            }
+            if ($link == "http://www.facebook.com/") {
+                continue;
+            }
+            if ($link == "https://www.facebook.com") {
+                continue;
+            }
+            if ($link == "https://www.facebook.com/") {
+                continue;
+            }
             if (strpos($link, "facebook.com") !== false) {
                 return $link;
             }
