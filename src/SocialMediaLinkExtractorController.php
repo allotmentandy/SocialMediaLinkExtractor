@@ -48,6 +48,10 @@ class SocialMediaLinkExtractorController extends Controller
     public function getFacebook($array)
     {
         foreach ($array as $link) {
+            if (substr($link, 0, 4) != "http") {
+                continue;
+            }
+
             if (strpos($link, "facebook.com") !== false) {
                 return $link;
             }
@@ -57,6 +61,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getInstagram($array)
     {
         foreach ($array as $link) {
+            if (substr($link, 0, 4) != "http") {
+                continue;
+            }
             if (strpos($link, "instagram.com") !== false) {
                 return $link;
             }
@@ -66,6 +73,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getYoutube($array)
     {
         foreach ($array as $link) {
+            if (substr($link, 0, 4) != "http") {
+                continue;
+            }
             if (strpos($link, "youtube.com") !== false) {
                 return $link;
             }
@@ -75,6 +85,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getLinkedin($array)
     {
         foreach ($array as $link) {
+            if (substr($link, 0, 4) != "http") {
+                continue;
+            }
             if (strpos($link, "linkedin.com") !== false) {
                 return $link;
             }
@@ -84,6 +97,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getGoogle($array)
     {
         foreach ($array as $link) {
+            if (substr($link, 0, 4) != "http") {
+                continue;
+            }
             if (strpos($link, "plus.google.com") !== false) {
                 return $link;
             }
@@ -93,6 +109,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getPinterest($array)
     {
         foreach ($array as $link) {
+            if (substr($link, 0, 4) != "http") {
+                continue;
+            }
             if (strpos($link, "pinterest.com") !== false) {
                 return $link;
             }
@@ -102,6 +121,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getGithub($array)
     {
         foreach ($array as $link) {
+            if (substr($link, 0, 4) != "http") {
+                continue;
+            }
             if (strpos($link, "github.com") !== false) {
                 return $link;
             }
@@ -111,6 +133,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getFlickr($array)
     {
         foreach ($array as $link) {
+            if (substr($link, 0, 4) != "http") {
+                continue;
+            }
             if (strpos($link, "flickr.com") !== false) {
                 return $link;
             }
@@ -120,6 +145,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getTumblr($array)
     {
         foreach ($array as $link) {
+            if (substr($link, 0, 4) != "http") {
+                continue;
+            }
             if (strpos($link, "tumblr.com") !== false) {
                 return $link;
             }
