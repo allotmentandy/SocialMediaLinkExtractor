@@ -191,4 +191,14 @@ class SocialMediaLinkExtractorController extends Controller
             }
         }
     }
+
+    public function getRss($array)
+    {
+        foreach ($array as $link) {
+            if (substr($link, -4) != ".rss") {
+                continue;
+            }
+            return $link;
+        }
+    }
 }
