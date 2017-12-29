@@ -105,6 +105,12 @@ class SocialMediaLinkExtractorController extends Controller
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
+            if (strpos($link, "http://www.youtube.com/watch?") != false) {
+                continue;
+            }
+            if (strpos($link, "https://www.youtube.com/embed/") != false) {
+                continue;
+            }
             if (strpos($link, "youtube.com") !== false) {
                 return $link;
             }
@@ -139,6 +145,9 @@ class SocialMediaLinkExtractorController extends Controller
     {
         foreach ($array as $link) {
             if (substr($link, 0, 4) != "http") {
+                continue;
+            }
+            if (strpos($link, "https://pinterest.com/pin/create/") != false) {
                 continue;
             }
             if (strpos($link, "pinterest.com") !== false) {
