@@ -198,6 +198,22 @@ class SocialMediaLinkExtractorController extends Controller
             if (substr($link, -4) != ".rss") {
                 continue;
             }
+            if (substr($link, -5) != ".atom") {
+                continue;
+            }
+            if (substr($link, -4) != ".xml") {
+                continue;
+            }
+            if (substr($link, -4) != "feed") {
+                continue;
+            }
+            if (substr($link, -5) != "feed/") {
+                continue;
+            }
+            if (substr($link, -3) != "rss") {
+                continue;
+            }
+
             return $link;
         }
     }
