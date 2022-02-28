@@ -24,6 +24,9 @@ class SocialMediaLinkExtractorController extends Controller
             if ($link == "http://www.twitter.com/") {
                 continue;
             }
+            if ($link == "https://twitter.com/") {
+                continue;
+            }
             if ($link == "http://www.twitter.com") {
                 continue;
             }
@@ -204,10 +207,10 @@ class SocialMediaLinkExtractorController extends Controller
             if (substr($link, -4) != ".xml") {
                 continue;
             }
-            if (substr($link, -4) != "feed") {
+            if (substr($link, -5) != "/feed") {
                 continue;
             }
-            if (substr($link, -5) != "feed/") {
+            if (substr($link, -6) != "/feed/") {
                 continue;
             }
             if (substr($link, -3) != "rss") {
