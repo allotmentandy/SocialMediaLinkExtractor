@@ -30,6 +30,9 @@ class SocialMediaLinkExtractorController extends Controller
             if ($link == "http://www.twitter.com") {
                 continue;
             }
+            if ($link == "http://www.twitter.com/#") {
+                continue;
+            }
             if ($link == "http://twitter.com/") {
                 continue;
             }
@@ -151,6 +154,12 @@ class SocialMediaLinkExtractorController extends Controller
                 continue;
             }
             if (strpos($link, "https://pinterest.com/pin/create/") != false) {
+                continue;
+            }
+            if (strpos($link, "http://pinterest.com/pin/create/") != false) {
+                continue;
+            }
+            if (strpos($link, "https://www.pinterest.com/pin/create") != false) {
                 continue;
             }
             if (strpos($link, "pinterest.com") !== false) {
