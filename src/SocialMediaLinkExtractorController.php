@@ -129,6 +129,9 @@ class SocialMediaLinkExtractorController extends Controller
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
+            if (strpos($link, "https://www.linkedin.com/shareArticle?") != false) {
+                continue;
+            }
             if (strpos($link, "linkedin.com") !== false) {
                 return $link;
             }
@@ -139,6 +142,9 @@ class SocialMediaLinkExtractorController extends Controller
     {
         foreach ($array as $link) {
             if (substr($link, 0, 4) != "http") {
+                continue;
+            }
+            if (strpos($link, "https://plus.google.com/share?") != false) {
                 continue;
             }
             if (strpos($link, "plus.google.com") !== false) {
