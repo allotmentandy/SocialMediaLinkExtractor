@@ -45,6 +45,12 @@ class SocialMediaLinkExtractorController extends Controller
             if ($link == "https://twitter.com/twitter") {
                 continue;
             }
+            if ($link == "https://twitter.com/share") {
+                continue;
+            }
+            if ($link == "https://twitter.com") {
+                continue;
+            }
             if ($link == "https://twitter.com/twitterapi") {
                 continue;
             }
@@ -57,9 +63,6 @@ class SocialMediaLinkExtractorController extends Controller
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
-
-
-
             if (strpos($link, "twitter.com") !== false) {
                 return $link;
             }
@@ -87,6 +90,12 @@ class SocialMediaLinkExtractorController extends Controller
             if ($link == "https://www.facebook.com/") {
                 continue;
             }
+            if ($link == "https://facebook.com") {
+                continue;
+            }
+            if ($link == "https://facebook.com/") {
+                continue;
+            }
             if (strpos($link, "facebook.com") !== false) {
                 return $link;
             }
@@ -97,6 +106,12 @@ class SocialMediaLinkExtractorController extends Controller
     {
         foreach ($array as $link) {
             if (substr($link, 0, 4) != "http") {
+                continue;
+            }
+            if ($link == "https://instagram.com") {
+                continue;
+            }
+            if ($link == "https://instagram.com/") {
                 continue;
             }
             if (strpos($link, "instagram.com") !== false) {
@@ -112,6 +127,9 @@ class SocialMediaLinkExtractorController extends Controller
                 continue;
             }
             if (strpos($link, "http://www.youtube.com/watch?") != false) {
+                continue;
+            }
+            if ($link == "https://youtube.com") {
                 continue;
             }
             if (strpos($link, "https://www.youtube.com/embed/") != false) {
@@ -130,6 +148,12 @@ class SocialMediaLinkExtractorController extends Controller
                 continue;
             }
             if (strpos($link, "https://www.linkedin.com/shareArticle?") != false) {
+                continue;
+            }
+            if ($link == "http://linkedin.com") {
+                continue;
+            }
+            if ($link == "http://www.linkedin.com/") {
                 continue;
             }
             if (strpos($link, "linkedin.com") !== false) {
