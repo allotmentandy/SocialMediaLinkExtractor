@@ -147,7 +147,7 @@ class SocialMediaLinkExtractorController extends Controller
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
-            if (strpos($link, "https://www.linkedin.com/shareArticle?") != false) {
+            if (strpos($link, "https://www.linkedin.com/shareArticle") != false) {
                 continue;
             }
             if ($link == "http://linkedin.com") {
@@ -168,7 +168,7 @@ class SocialMediaLinkExtractorController extends Controller
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
-            if (strpos($link, "https://plus.google.com/share?") != false) {
+            if (strpos($link, "https://plus.google.com/share") != false) {
                 continue;
             }
             if (strpos($link, "plus.google.com") !== false) {
@@ -184,6 +184,9 @@ class SocialMediaLinkExtractorController extends Controller
                 continue;
             }
             if (strpos($link, "https://pinterest.com/pin/create/") != false) {
+                continue;
+            }
+            if (strpos($link, "https://www.pinterest.com/pin/create/button/") != false) {
                 continue;
             }
             if (strpos($link, "http://pinterest.com/pin/create/") != false) {
@@ -226,6 +229,12 @@ class SocialMediaLinkExtractorController extends Controller
     {
         foreach ($array as $link) {
             if (substr($link, 0, 4) != "http") {
+                continue;
+            }
+            if (strpos($link, "https://www.tumblr.com/share") != false) {
+                continue;
+            }
+            if (strpos($link, "http://tumblr.com/widgets/share/") != false) {
                 continue;
             }
             if (strpos($link, "tumblr.com") !== false) {
