@@ -243,6 +243,23 @@ class SocialMediaLinkExtractorController extends Controller
         }
     }
 
+
+    public function getTiktok($array)
+    {
+        foreach ($array as $link) {
+            if (substr($link, 0, 4) != "http") {
+                continue;
+            }
+            if (strpos($link, "tiktok.com") !== false) {
+                return $link;
+            }
+        }
+    }
+
+
+
+
+
     public function getRss($array)
     {
         foreach ($array as $link) {

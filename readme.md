@@ -35,7 +35,23 @@ class HomeController extends Controller
     }
 }
 ```
-
+Here is the full list
+```
+        $smle = new \allotmentandy\socialmedialinkextractor\SocialMediaLinkExtractorController();
+        echo "<h4>Social Media</h4>";
+        echo $smle->getTwitter($linkArray) . "<br>";
+        echo $smle->getFacebook($linkArray) . "<br>";
+        echo $smle->getYoutube($linkArray) . "<br>";
+        echo $smle->getInstagram($linkArray) . "<br>";
+        echo $smle->getLinkedin($linkArray) . "<br>";
+        echo $smle->getGoogle($linkArray) . "<br>";
+        echo $smle->getPinterest($linkArray) . "<br>";
+        echo $smle->getGithub($linkArray) . "<br>";
+        echo $smle->getFlickr($linkArray) . "<br>";
+        echo $smle->getTumblr($linkArray) . "<br>";
+        echo $smle->getTiktok($linkArray) . "<br>";
+        echo $smle->getRss($linkArray) . "<br>";
+```
 
 
 ### original idea from here
