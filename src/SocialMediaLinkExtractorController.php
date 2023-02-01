@@ -15,6 +15,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getTwitter($array)
     {
         foreach ($array as $link) {
+            if (strlen($link) > 254) {
+                continue;
+            }
             if (strpos($link, "http://twitter.com/intent/") != false) {
                 continue;
             }
@@ -129,6 +132,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getYoutube($array)
     {
         foreach ($array as $link) {
+            if (strlen($link) > 254) {
+                continue;
+            }
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
@@ -150,6 +156,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getLinkedin($array)
     {
         foreach ($array as $link) {
+            if (strlen($link) > 254) {
+                continue;
+            }
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
@@ -171,6 +180,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getGoogle($array)
     {
         foreach ($array as $link) {
+            if (strlen($link) > 254) {
+                continue;
+            }
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
@@ -186,6 +198,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getPinterest($array)
     {
         foreach ($array as $link) {
+            if (strlen($link) > 254) {
+                continue;
+            }            
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
@@ -210,6 +225,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getGithub($array)
     {
         foreach ($array as $link) {
+            if (strlen($link) > 254) {
+                continue;
+            }            
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
@@ -222,6 +240,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getFlickr($array)
     {
         foreach ($array as $link) {
+            if (strlen($link) > 254) {
+                continue;
+            }            
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
@@ -237,16 +258,16 @@ class SocialMediaLinkExtractorController extends Controller
             if (strlen($link) > 254) {
                 continue;
             }
-            if (substr($link, 0, 4) != "http") {
+            if (substr($link, 0, 4) !== "http") {
                 continue;
             }
-            if (strpos($link, "https://www.tumblr.com/share") != false) {
+            if (strpos($link, "https://www.tumblr.com/share") !== false) {
                 continue;
             }
-            if (strpos($link, "http://tumblr.com/widgets/share/") != false) {
+            if (strpos($link, "http://tumblr.com/widgets/share/") !== false) {
                 continue;
             }
-            if (strpos($link, "http://www.tumblr.com/widgets/share/") != false) {
+            if (strpos($link, "http://www.tumblr.com/widgets/share/") !== false) {
                 continue;
             }
             if (strpos($link, "tumblr.com") !== false) {
@@ -258,6 +279,9 @@ class SocialMediaLinkExtractorController extends Controller
     public function getTiktok($array)
     {
         foreach ($array as $link) {
+            if (strlen($link) > 254) {
+                continue;
+            }
             if (substr($link, 0, 4) != "http") {
                 continue;
             }
