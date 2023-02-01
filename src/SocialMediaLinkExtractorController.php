@@ -264,6 +264,9 @@ class SocialMediaLinkExtractorController extends Controller
             if (strpos($link, "https://www.tumblr.com/share") !== false) {
                 continue;
             }
+            if (strpos($link, "http://www.tumblr.com/share/") !== false) {
+                continue;
+            }
             if (strpos($link, "http://tumblr.com/widgets/share/") !== false) {
                 continue;
             }
